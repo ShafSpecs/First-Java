@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class print_java {
+public class Basic {
 	
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
