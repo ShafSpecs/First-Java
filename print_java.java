@@ -1,4 +1,3 @@
-
 /**
 * This program prints the result of two string's concatenation or sum of two user-selected numbers!
 * 
