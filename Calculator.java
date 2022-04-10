@@ -21,25 +21,31 @@ public class Calculator {
       case "hc":
         System.out.print("Enter the mass of substance (in kilograms): ");
         double mass = input.nextDouble();
+
         System.out.print("Enter the initial temperature of the water (in Celcius): ");
         double initialTemp = input.nextDouble();
+
         System.out.print("Enter the final temperature of the water (in Celcius): ");
         double finalTemp = input.nextDouble();
+
         System.out.print("The energy needed to heat the water is: " + heatCapacity(mass, initialTemp, finalTemp) + "J");
         break;
       case "feet":
         System.out.print("Enter the number of feet: ");
         double feet = input.nextDouble();
+
         System.out.print("The number of meters is: " + feetToMeters(feet));
         break;
       case "lbs":
         System.out.print("Enter the number of pounds: ");
         double pounds = input.nextDouble();
+
         System.out.print("The number of kilograms is: " + poundsToKilo(pounds));
         break;
       case "celsius":
         System.out.println("Enter the number of degrees Celsius: ");
         double celsius = input.nextDouble();
+        
         System.out.println("The number of degrees Fahrenheit is: " + celsiusToFahrenheit(celsius));
         break;
       default:
