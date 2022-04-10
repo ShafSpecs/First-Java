@@ -9,6 +9,7 @@
 import java.util.Scanner;
 
 public class print_java {
+	
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 
