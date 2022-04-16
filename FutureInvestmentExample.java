@@ -18,8 +18,11 @@ public class FutureInvestmentExample {
     keyboardInput.close();
   }
 
-  private static void calculateInv (double currInv, double annualIntRate, int numOfYrs) {
-    double futureInvestment = (Math.pow((1 + annualIntRate), numOfYrs) * currInv);
+  private static void calculateInv (double currentInv, double annualIntRate, int numOfYrs) {
+    double monthlyRate = annualIntRate / 12;
+    double bracketVal = monthlyRate + 1;
+    double powered = Math.pow(bracketVal, numOfYrs * 12);
+    double futureInvestment = currentInv * powered;
     System.out.printf("The value of your investment after %d year(s) is: %.2f%n", numOfYrs, futureInvestment);
   }
 }
