@@ -1,6 +1,17 @@
 import java.util.Scanner;
 
 public class HeartRateTest {
+  public static HeartRate createPatient (String fullName, int day, String month, int year) {
+    HeartRate patient = new HeartRate(fullName, day, month, year);
+    return patient;
+  }
+
+  public static void printInformation (HeartRate patient) {
+    System.out.printf("%s, born on %d %s %d, is %d years old.%n", patient.getFullName(), patient.getDay(), patient.getMonth(), patient.getYear(), patient.calculateAge());
+    System.out.printf("Maximum heart rate: %d bpm.%n", patient.calculateMaximumHeartRate());
+    System.out.printf("Target heart rate of %s is %.2f bpm.%n", patient.getFullName(), patient.targetHeartRate());
+  }
+  
   public static void main(String[] args) {
     Scanner userInput = new Scanner(System.in);
 
@@ -18,16 +29,5 @@ public class HeartRateTest {
 
     HeartRate patient1 = createPatient(fullName, day, month, year);
     printInformation(patient1);
-  }
-
-  public static HeartRate createPatient (String fullName, int day, String month, int year) {
-    HeartRate patient = new HeartRate(fullName, day, month, year);
-    return patient;
-  }
-
-  public static void printInformation (HeartRate patient) {
-    System.out.printf("%s, born on %d %s %d, is %d years old.%n", patient.getFullName(), patient.getDay(), patient.getMonth(), patient.getYear(), patient.calculateAge());
-    System.out.printf("Maximum heart rate: %d bpm.%n", patient.calculateMaximumHeartRate());
-    System.out.printf("Target heart rate of %s is %.2f bpm.%n", patient.getFullName(), patient.targetHeartRate());
   }
 }
